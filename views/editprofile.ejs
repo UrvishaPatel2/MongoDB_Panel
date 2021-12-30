@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Update Profile</title>
+    <style>
+        body {
+            background-color: #f1f1f1 !important;
+        }
+
+        .form-holder {
+            margin-top: 20%;
+            margin-bottom: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="card form-holder">
+                    <div class="card-body">
+                        <h3 style="text-align: center;">Update Profile</h3>
+                        <% if (typeof error !=='undefined' && error.length> 0) { %>
+
+                            <div class="alert alert-warning"
+                                style="text-align: center; font-size: 17px!important; border-radius: 0%;">
+                                <%= error %> &nbsp; &nbsp; &nbsp;<a href="/editprofile" style="color:#3d9970">&#10006;</a>
+                            </div>
+
+                            <% } %>
+                            <form action="/editProfile" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    
+                                    <label><b>Name</b></label>
+                                    <input type="text" name="name" class="form-control" placeholder="Username" value="<%= user.name%>" />
+                                        <% if (typeof error1 !=='undefined' && error1.length> 0) { %>
+                                            <div style="color: red;">
+                                                <%= error1 %>
+                                            </div>
+                                         <% } %>
+                                </div>
+                                <div class="form-group">
+                                    <label><b>Email</b></label>
+                                    <input type="text" name="email" class="form-control" placeholder="Email" value="<%= user.email%>" />
+                                    <% if (typeof error2 !=='undefined' && error2.length> 0) { %>
+                                        <div style="color: red;">
+                                            <%= error2 %>
+                                        </div>
+                                    <% } %>
+                                </div>
+                                <div class="form-group">
+                                    <label name="gender" id="gender"><b>Gender</b>&nbsp;</label>
+                                    <input type="radio" id="gender" name="gender" value="Male" <%= user.gender ? 'checked' :'' %>>&nbsp;Male
+                                    <input class="ml-4" type="radio" id="gender" name="gender" value="Female" <%= user.gender? 'checked' :'' %>>&nbsp;Female
+                                    <% if (typeof error3 !=='undefined' && error3.length> 0) { %>
+                                        <div style="color: red;">
+                                            <%= error3 %>
+                                        </div>
+                                     <% } %>
+                                </div>
+                                <div class="form-group">
+                                    <label><b>Phone No</b></label>
+                                    <input type="text" name="phoneno" class="form-control" placeholder="Phone No" value="<%= user.phoneno %>" />
+                                    <% if (typeof error4 !=='undefined' && error4.length> 0) { %>
+                                        <div style="color: red;">
+                                            <%= error4 %>
+                                        </div>
+                                     <% } %>
+                                </div>
+                                <div class="form-group">
+                                        <label for="image" name="image" class="form-label">Upload Image</label>
+                                        <input class="form-control" type="file" id="formFileMultiple" name="uploadImage" />
+                                        <img src="/<%= user.uploadImage %>" width="100"  class="img-thumbnail mt-1">
+                                        <% if (typeof error5 !=='undefined' && error5.length> 0)
+                                            { %>
+                                            <div style="color: red;">
+                                                <%= error5 %>
+                                            </div>
+                                            <% } %>
+                                    <input type="hidden" name="old_image" value="<%= user.uploadImage %>">
+                                </div>
+                               
+                                <div class="form-group">
+                                    <label><b>City</b></label><br />
+                                        <select name="city" id="city" value="">
+                                            <option value="">--select city--</option>
+                                            <option value="navsari" <%= user.city=="navsari" ? 'selected' :'' %>>Navsari</option>
+                                            <option value="surat" <%= user.city=="surat" ? 'selected' :'' %>>Surat</option>
+                                            <option value="ahmedabad" <%= user.city=="ahmedabad" ? 'selected' :'' %>>Ahmedabad</option>
+                                        </select>
+                                        <% if (typeof error6 !=='undefined' && error6.length> 0) { %>
+                                            <div style="color: red;">
+                                                <%= error6 %>
+                                            </div>
+                                        <% } %>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-right">
+                                        <input type="submit" class="btn btn-primary" value="Update" />
+                                        <a href="/profile" class="btn btn-danger">Cancel</a>
+
+                                    </div>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

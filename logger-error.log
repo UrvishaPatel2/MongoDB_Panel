@@ -1,0 +1,13 @@
+{"level":"error","message":"ErrorCannot read property 'filename' of undefined","stack":"TypeError: Cannot read property 'filename' of undefined\n    at exports.authregister (C:\\Users\\jaini\\OneDrive\\Desktop\\Urvisha\\Admin_Panel_Project\\app\\controllers\\user_controller.js:108:39)"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"ErrorCannot read property 'filename' of undefined","stack":"TypeError: Cannot read property 'filename' of undefined\n    at exports.authregister (C:\\Users\\jaini\\OneDrive\\Desktop\\Urvisha\\Admin_Panel_Project\\app\\controllers\\user_controller.js:107:39)"}
+{"level":"error","message":"ErrorCannot read property 'filename' of undefined","stack":"TypeError: Cannot read property 'filename' of undefined\n    at exports.authregister (C:\\Users\\jaini\\OneDrive\\Desktop\\Urvisha\\Admin_Panel_Project\\app\\controllers\\user_controller.js:109:39)"}
+{"level":"error","message":"ErrorCannot read property 'filename' of undefined","stack":"TypeError: Cannot read property 'filename' of undefined\n    at exports.authregister (C:\\Users\\jaini\\OneDrive\\Desktop\\Urvisha\\Admin_Panel_Project\\app\\controllers\\user_controller.js:109:39)"}
+{"level":"error","message":"ErrorCannot read property 'filename' of undefined","stack":"TypeError: Cannot read property 'filename' of undefined\n    at exports.authregister (C:\\Users\\jaini\\OneDrive\\Desktop\\Urvisha\\Admin_Panel_Project\\app\\controllers\\user_controller.js:109:39)"}
+{"level":"error","message":"ErrorCannot read property 'filename' of undefined","stack":"TypeError: Cannot read property 'filename' of undefined\n    at exports.authregister (C:\\Users\\jaini\\OneDrive\\Desktop\\Urvisha\\Admin_Panel_Project\\app\\controllers\\user_controller.js:109:39)"}
+{"level":"error","message":"ErrorCannot read property 'filename' of undefined","stack":"TypeError: Cannot read property 'filename' of undefined\n    at exports.authregister (C:\\Users\\jaini\\OneDrive\\Desktop\\Urvisha\\Admin_Panel_Project\\app\\controllers\\user_controller.js:109:39)"}
